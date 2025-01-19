@@ -25,12 +25,12 @@ async function fetchChatbotResponse(input) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer [INSERT API KEY HERE]'  // directly include the API key for demo purposes
+                'Authorization': 'Bearer INSERT_TOKEN_HERE'  // directly include the API key for demo purposes
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini",
                 messages: [
-                    { role: "system", content: "You are a helpful assistant." },
+                    { role: "system", content: "Be skeptical and disagree with purchases. Respond briefly, under 50 words. Only agree if the argument is convincing."},
                     { role: "user", content: input }
                 ],
                 max_tokens: 50 // how many characters for each response
