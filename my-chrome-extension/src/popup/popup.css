@@ -1,11 +1,11 @@
 #chat-container {
     width: 300px;
     height: 400px;
-    border: 1px solid #ccc;
+    border: 1px solid #FF6554;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #FFFDF7;
 }
 
 #message-area {
@@ -23,11 +23,26 @@
     width: 100%;
     padding: 5px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #C14037;
     color: white;
     border: none;
     border-radius: 3px;
 }
+
+#input-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+
+
+#extra-image {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px;
+    cursor: pointer;
+}
+
 
 .message {
     padding: 5px 10px;
@@ -36,13 +51,52 @@
 }
 
 .user-message {
-    background-color: #007BFF;
-    color: white;
+    background-color: #C14037;
+    color: #FFFDF7;
     align-self: flex-end;
 }
 
 .system-message {
-    background-color: #eee;
-    color: black;
+    background-color: #D9D9D9;
+    color: #252525;
     align-self: flex-start;
 }
+
+/* #brand-name {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #C14037;
+    margin-bottom: 10px;
+    background-color: #FFFDF7;
+    padding: 10px 0;
+    border-bottom: 1px solid #FF6554;
+    font-family: 'Lora', serif;
+} */
+
+#brand-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #FFFDF7;
+    padding: 10px 0;
+    border-bottom: 1px solid #FF6554;
+}
+
+#logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+    margin-bottom: 5px; /* Space between logo and brand name */
+}
+
+#brand-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #C14037;
+    font-family: 'Lora', serif;
+}
+
+

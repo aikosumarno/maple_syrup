@@ -6,11 +6,25 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div id="chat-container">
+    <div id="brand-section">
+        <img id="logo" src="chrome-extension://ipffbihodfnfagacajiojolbmipfacec/images/angrybunny.png" alt="Brand Logo" />
+        <div id="brand-name">maple syrup</div>
+    </div>
+    <!-- <div id="chat-container">
         <div id="message-area"></div>
         <input type="text" id="inputField" placeholder="Type a message..." />
         <button id="submitButton">Send</button>
+        <img id="extra-image" src="chrome-extension://ipffbihodfnfagacajiojolbmipfacec/images/angrybunny.png" alt="Extra Icon" />
+    </div> -->
+    <div id="chat-container">
+        <div id="message-area"></div>
+        <div id="input-section">
+            <img id="extra-image" src="chrome-extension://ipffbihodfnfagacajiojolbmipfacec/images/angrybunny.png" alt="Extra Icon" />
+            <input type="text" id="inputField" placeholder="Type a message..." />
+            <button id="submitButton">Send</button>
+        </div>
     </div>
+    
     <script src="popup.js"></script>
 </body>
 </html>
