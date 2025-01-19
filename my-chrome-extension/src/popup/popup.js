@@ -1,12 +1,22 @@
 document.getElementById('submitButton').addEventListener('click', function() {
     var input = document.getElementById('inputField').value;
+    if (input.trim() === '') return;  // prevent sending empty messages
+    appendMessage(input, 'user');
     fetchChatbotResponse(input);
+    document.getElementById('inputField').value = ''; // clear input after send
 });
 
+function appendMessage(message, sender) {
+    const messageArea = document.getElementById('message-area');
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('message', sender === 'user' ? 'user-message' : 'system-message');
+    msgDiv.textContent = message;
+    messageArea.appendChild(msgDiv);
+    messageArea.scrollTop = messageArea.scrollHeight; // auto-scroll to the latest message (chain messages text-style)
+}
+
 function displayResult(response) {
-    var resultContainer = document.getElementById('result');
-    resultContainer.innerHTML = response;
-    resultContainer.style.display = 'block'; // result container
+    appendMessage(response, 'system');
 }
 
 async function fetchChatbotResponse(input) {
@@ -15,7 +25,7 @@ async function fetchChatbotResponse(input) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer [INSERT KEY HERE]'  // Directly include the API key for demo purposes
+                'Authorization': 'Bearer [INSERT API KEY HERE]'  // directly include the API key for demo purposes
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini",
