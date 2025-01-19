@@ -11,7 +11,7 @@
   ],
   "action": {
     "default_popup": "popup/popup.html",
-    "default_icon": "images/logo.png"
+    "default_icon": "images/icon16.png"
   },
   "background": {
     "service_worker": "background.js"
